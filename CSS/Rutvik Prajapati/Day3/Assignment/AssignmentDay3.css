@@ -1,0 +1,42 @@
+/* * {
+    box-sizing: border-box;
+  } */
+#nav > a{
+    padding: 20px;
+    float: right;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+#nav{
+    background-color: black;
+    float: left;
+    width: 100%;
+}
+#nav #logo{
+    padding: 10px;
+    float: left;
+}
+#leftbar{
+    height: 1555px;
+    /* clear: left;*/
+    float: left; 
+    background-color: yellowgreen;
+    width: 20%;
+}
+#sidebar{
+    /* height: 500px; */
+    float: right;
+    background-color: yellow;
+    width: 80%;
+}
+#Home,#AboutUs,#ContactUs{
+    height: 500px;
+}
+
+#footerbar{
+    height: 150px;
+    background-color: tomato;
+    width: 100%;
+    clear: both;
+}

@@ -1,0 +1,118 @@
+/* CSS Float Properties */
+#parent div{
+   float: left;
+}
+#child1{
+    width: 50%;
+    border: 1px solid black;
+}
+
+#child2{
+    width: 49%;
+    border: 1px solid black;
+    background-color: yellowgreen;
+}
+#divid div{
+    float: left;
+}
+#child2 p{
+    float: right;
+}
+
+h2{
+    clear:left;
+}
+.newdiv{
+    clear: left;
+}
+.new{
+    float: left;
+    padding : 50px;
+    width: 33.33%;
+}
+* {
+    box-sizing: border-box;
+  }
+
+  /* CSS Position Properties */
+.divstatic{
+    position: static;
+    left: 30px;
+    border: 1px solid black;
+}
+.divrelative{
+    position: relative;
+    left: 30px;
+    border: 1px solid black;
+}
+.divfixed{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    left: 30px;
+    border: 1px solid black;
+}
+
+div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+  }
+  
+  div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+  }
+  div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: white;
+    border: 2px solid green;
+  }
+
+  /* CSS overflow Properties */
+
+  #overflowid{
+    background-color: #eee;
+    width: 200px;
+    height: 50px;
+    border: 1px dotted black;
+    overflow: visible; /*   by default overflow: visible; */
+  }
+  #hiddenid{
+    background-color: #eee;
+    width: 200px;
+    height: 50px;
+    border: 1px dotted black;
+    overflow: hidden;
+  }
+  #scrollid{
+    background-color: #eee;
+    width: 200px;
+    height: 50px;
+    border: 1px dotted black;
+    overflow: scroll;
+  }
+  #autoid{
+    background-color: #eee;
+    width: 200px;
+    height: 50px;
+    border: 1px dotted black;
+    overflow: scroll;
+  }
+  #overflowXorYid{
+    background-color: #eee;
+    width: 200px;
+    height: 50px;
+    border: 1px dotted black;
+      overflow-x: scroll;
+      overflow-y: hidden;
+  }
