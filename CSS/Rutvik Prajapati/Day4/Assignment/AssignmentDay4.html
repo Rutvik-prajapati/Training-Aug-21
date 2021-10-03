@@ -1,0 +1,117 @@
+<!-- Create a menu ast of the website. It shodivd be responsive. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AssignmentDay4</title>
+<style>
+    /* nav {
+        width: 100%;
+    }
+     .navbar ul{
+        display: flex;
+        list-style-type: none;
+    }
+    .navbar a {
+        padding: 10px;
+        background-color: chartreuse;
+        text-decoration : none;
+        font-size: x-large;
+    }
+    .navbar ul ul{
+        display: inline-block;
+    } 
+    nav li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+} */
+nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+    width: 20%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 140%;
+    display: inline-block;
+    margin-right: -4px;
+  }
+
+
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding-left: 15px;
+  transition: .5s background-color;
+}
+
+nav a:hover {
+  background-color: #005f5f;
+}
+
+nav a.active {
+  background-color: #aaa;
+  color: #444;
+  cursor: default;
+}
+
+/* Sub Menus */
+nav li li {
+  font-size: .8em;
+}
+
+nav li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+}
+
+nav li:hover ul {
+   display: block;
+}
+
+nav li ul li {
+   display: block;
+ }
+</style>
+
+</head>
+<body>
+    <article>
+        <nav class="navbar">
+           <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu1</a>
+                <ul>
+                    <li><a href="#">Option1</a></li>
+                    <li><a href="#">Option2</a></li>
+                    <li><a href="#">Option3</a></li>
+                    <li><a href="#">Option4</a></li>
+                    <li><a href="#">Option5</a></li>
+                </ul>
+            </li>
+                
+            <li><a href="#">Menu1</a>
+                <ul>
+                    <li><a href="#">Option1</a></li>
+                    <li><a href="#">Option2</a></li>
+                    <li><a href="#">Option3</a></li>
+                    <li><a href="#">Option4</a></li>
+                    <li><a href="#">Option5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul> 
+        </nav>
+    </article>
+</body>
+</html>
