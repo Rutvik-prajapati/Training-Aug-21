@@ -1,0 +1,26 @@
+<!-- You have one h1 and one paragraph in your page with blue color border. 
+    For all the media screen and query selector (maximum width 500px) it should be 
+    change to red color border. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice1</title>
+</head>
+<style>
+    h1,p {
+        border: 3px solid blue;
+    }
+    @media only screen and (max-width: 500px) {
+        h1,p {
+        border: 3px solid red;
+    } 
+    }
+</style>
+<body>
+    <h1>Practice 1</h1>
+    <p>This is Paragraph</p>
+</body>
+</html>

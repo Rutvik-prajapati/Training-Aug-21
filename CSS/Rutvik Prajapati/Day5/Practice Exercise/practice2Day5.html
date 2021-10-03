@@ -1,0 +1,45 @@
+<!-- Media queries with breakpoint
+https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_mediaquery_breakpoints -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.para {
+  padding: 20px;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .para {background: red;}
+}
+
+
+@media only screen and (min-width: 600px) {
+  .para {background: green;}
+}
+
+
+@media only screen and (min-width: 768px) {
+  .para {background: blue;}
+} 
+
+
+@media only screen and (min-width: 992px) {
+  .para {background: orange;}
+} 
+
+
+@media only screen and (min-width: 1200px) {
+  .para {background: pink;}
+}
+</style>
+</head>
+<body>
+
+<h2>Media Query Breakpoints</h2>
+<p class="para">This is paragraph</p>
+
+</body>
+</html>

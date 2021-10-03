@@ -1,0 +1,39 @@
+<!-- What to Learn
+    CSS Media Queries/CSS Grid Layout/Bootstrap Introduction -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice Exercise</title>
+        <style>
+            .newdiv{
+                display: flex;
+                width: 100%;
+            }
+            .newdiv > div {
+                background-color: red;
+                padding: 10px;
+            }
+            @media only screen and (max-width: 500px)   { /* or @media (max-width: 500px) */
+                .newdiv > div {
+                    font-size: xx-large;
+                }
+            }
+            @media only screen and (max-width:800px) and (min-width : 500px) { /* or @media (max-width: 800px) and (min-width : 500px)  */
+                .newdiv > div {
+                    font-size: xx-large;
+                    background-color: yellow;
+                    color: black;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- CSS Media Queries -->
+        <h2>CSS Media Queries</h2>
+        <div class="newdiv">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </body>
+</html>

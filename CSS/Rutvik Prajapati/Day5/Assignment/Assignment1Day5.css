@@ -1,0 +1,30 @@
+.Gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-gap: 0.2rem;
+}
+
+.Gallery   img{
+    height: 300px;
+    width: 300px;
+}
+
+@media only screen and (max-width:500px) {
+    .Gallery{
+        grid-template-columns: 1fr;
+    }
+    .Gallery   img{
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width:800px) and (min-width:500px) {
+    .Gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+    .Gallery   img{
+        height: 200px;
+        width: 200px;
+    }
+}

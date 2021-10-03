@@ -1,0 +1,76 @@
+:root{
+    --padding : 10px;
+    --radious : 3px;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "Sidebar main main main"
+    "Sidebar Content1 Content2 Content3"
+    "footer footer footer footer";
+    grid-gap: 0.2rem;
+    text-align: center;
+}
+
+nav{
+    background-color: cadetblue;
+    grid-area: nav;
+    padding: var(--padding);
+    border-radius: var(--radious);
+}
+main{
+    background-color: rgb(65, 152, 155);
+    grid-area: main;
+    padding: var(--padding);
+    border-radius: var(--radious);
+}
+#Sidebar{
+    background-color: rgb(26, 86, 88);
+    grid-area: Sidebar;
+    padding: var(--padding);
+    border-radius: var(--radious);
+}
+#Content1{
+    background-color: rgb(13, 36, 37);
+    grid-area: Content1;
+    padding: var(--padding);
+    border-radius: var(--radious);
+}
+#Content2{
+    background-color: rgb(8, 65, 68);
+    grid-area: Content2;
+    padding: var(--padding);
+    border-radius: var(--radious);
+}
+#Content3{
+    background-color: rgb(5, 95, 100);
+    grid-area: Content3;
+    padding: var(--padding);
+    border-radius: var(--radious);
+}
+footer{
+    background-color: rgb(7, 202, 212);
+    grid-area: footer;
+    padding: var(--padding);
+    border-radius: var(--radious);
+}
+
+@media only screen and (max-width : 500px) {
+    .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "Sidebar"
+    "Content1"
+    "Content2"
+    "Content3"
+    "footer";
+    }
+}
