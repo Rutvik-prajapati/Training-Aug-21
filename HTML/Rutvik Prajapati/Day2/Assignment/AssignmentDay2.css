@@ -1,0 +1,64 @@
+#nameAndPhoto img{
+    /* width: 50px;
+    height: 50px; */
+    padding-top: 30px;
+    padding-left: 10px;
+}
+#nameAndPhoto h1{
+    color: black;
+}
+#nameAndPhoto{
+  /* background-color: red; */
+  width: 70%;
+  float: left;
+  /* height: 310px; */
+}
+#userIds {
+    /* background-color: green; */
+    width: auto;
+    /* height: 310px; */
+    padding-top: 30px;
+} 
+
+#tbl tr,th,td{
+    border: 1px solid black;
+    text-align: center;
+}
+#tbl {
+    border-collapse: collapse;
+}
+#education,#exp{
+    width: 70%;
+    float: left;
+}
+#skills ul{
+    /* list-style-type: none; */
+    padding-left: 73%;
+}
+#lan ul{
+    padding-left: 73%;
+}
+
+h1 {
+    color: rgba(20, 140, 238, 0.733);
+}
+
+#exp ul li{
+    width: 90%;
+}
+#exp video{
+    height: 300px;
+    width: 300px;
+    padding-left: 100px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+/* #mid{
+    background-color: blueviolet;
+}
+#skills{
+    background-color: yellow;
+}
+#education{
+    background-color: yellowgreen;
+} */

@@ -1,0 +1,207 @@
+<!-- What to Learn
+
+1.HTML5 Media Tags(Audio and Video)
+2.CSS
+    1.Introduction
+    2.CSS Selectors(id selectors, class selectors, element selectors)
+    3.Background Properties
+    4.Border Properties
+    5.Text Properties
+    6.Display Properties(inline, block, inline-block) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2Practice</title>
+    <style>
+        p {
+            color: green;
+        }
+        #pra1 {
+            background-color: red;
+        }
+        .pra2 {
+            background-color: yellow;
+        }
+        *{
+            background-color: yellowgreen;
+        }
+        /* descendant selectors */
+        div h2 {
+            text-align: center;
+        }
+        /* Child Selector (>) */
+        div > h1 {
+            font-size: small;
+        }
+        /* Adjacent Sibling Selector (+) */
+        div + p {
+            font-size: x-large;
+        }
+        /* general sibling selector (~)  */
+        div ~ p {
+            background-color: white;
+        }
+
+        /* background */
+        #newdiv p{
+            background-color: white;
+            opacity: 0.3;
+        }
+        #newdiv {
+            height: 250px;
+            background-image: url("./ImagesDay2/downloadDay2.png");
+            /* background-repeat: repeat-x; */
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-attachment: scroll;
+            /* background-attachment: fixed; */
+        }
+
+        /* border properties */
+        .b1 {
+            border-style:dotted ;
+            border-width: 5px;
+            border-color: red;
+        }
+        .b2 {
+            border-style:dashed ;
+            border-width: medium;
+            border-color: red yellowgreen;
+        }
+        .b3 {
+            border-style:solid ;
+            border-width: thick;
+        }
+        .b4 {
+            border-style:inset ;
+            border-width: 6px;
+            border-top-style: dotted;
+            border-right-style: solid;
+        }
+        .b5 {
+            border-style:none ;
+            border-width: 25px 10px 4px 35px;
+            border-radius: 5px;
+        }
+        /* text properties */
+        #textpro{
+            color: black;
+            background-color: pink;
+            text-align: center;
+            vertical-align: text-bottom;
+            /* text-decoration: overline; */
+            text-decoration: line-through;
+            /* text-decoration: underline; */
+            text-transform: uppercase;
+            text-indent: 50px;
+            /* letter-spacing: -3px; */
+            letter-spacing: 3px;
+            line-height: 0.8;
+            word-spacing: 10px;
+            text-shadow: 2px 2px 5px red;
+        }
+
+        #listofvehicle li{
+            list-style-type: none;
+            display: inline;
+        }
+        #listofvehicle1 li{
+            list-style-type: none;
+            display: block /* by default block */
+        } 
+        span.c {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;    
+            background-color: yellow; 
+        }
+    </style>
+</head>
+<body>
+    <h2>HTML Media tag</h2>
+    <h4>Video Tag</h4>
+    <video height="320" width="320" controls>
+        <source src="./greenishVideoClipDay2.mp4" type="video/mp4">
+    </video>
+    <video height="320" width="320" autoplay>
+        <source src="./greenishVideoClipDay2.mp4" type="video/mp4">
+    </video>
+    <h4>Audio Tag</h4>
+    <audio controls>
+        <source src="./audioClipDay2.wav" type="audio/wav">
+    </audio>
+    <audio autoplay muted>
+        <source src="./audioClipDay2.wav" type="audio/wav">
+    </audio>
+    <h4>youtube video</h4>
+    <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </iframe>
+
+    <!-- selectors -->
+    <h2>Selectors</h2>
+    <p>element selector</p>
+    <p id="pra1">id selector</p>
+    <p class="pra2">class selectors</p>
+    <p>universal  selectors</p>
+    
+    <!-- CSS Combinators -->
+    <!-- There are four different combinators in CSS:
+        descendant selector (space)
+        child selector (>)
+        adjacent sibling selector (+)
+        general sibling selector (~) -->
+    <h3>descendant selectors</h3>
+    <div>
+        <h1>s1</h1>
+        <h2>s1</h2>
+        <h1>haresh</h1>
+    </div>
+    <p>Adjacent Sibling Selector (+)</p>
+    <p>general sibling selector (~) </p>
+
+    <!-- Background -->
+    <h2>Background</h2>
+    <div id="newdiv">
+        <p>Background color</p>
+    </div>
+
+    <!-- Border Properties -->
+    <h2>Border Properties</h2>
+    <p class="b1">border1</p>
+    <p class="b2">border2</p>
+    <p class="b3">border3</p>
+    <p class="b4">border4</p>
+    <p class="b5">border5</p>
+
+     <!-- Text Properties -->
+    <h2>Text Properties</h2>
+    <h3 id="textpro">Text on apply css</h3>
+
+    <!-- Display Properties(inline, block, inline-block) -->
+    <h2>Display Properties(inline, block, inline-block)</h2>
+    <h3>Inline</h3>
+    <nav id="listofvehicle">
+        <li>car </li>
+        <li>rixa </li>
+        <li>cycle </li>
+    </nav>
+    <nav id="listofvehicle1">
+        <li>car </li>
+        <li>rixa </li>
+        <li>cycle </li>
+    </nav>
+    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Vestibulum consequat scelerisque elit sit amet consequat. 
+        Aliquam erat volutpat. 
+        <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit 
+        amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+</body>
+
+</html>
