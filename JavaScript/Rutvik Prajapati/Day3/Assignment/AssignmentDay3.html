@@ -1,0 +1,136 @@
+<!-- Design a form for storing employee details. (EmployeeID, Employee name, age, Gender, 
+     designation, salary, location, Email ID, Date of Joining and contact number)
+            Validation required
+                EmployeeID should be at least 5 character long. use regular Expression
+                Age should be a number
+                Each field should contain value
+                Email ID should be in proper format
+                Date of joining should be in date format
+            Location should be in the drop down list
+            Use radio buttons for Gender -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Assignment</title>
+</head>
+
+<body>
+    <div class="container border rounded my-3 ">
+        <form name="form1">
+            <h2 class="text-md-center">Employee Details:</h2>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 form-group">
+                    <label class="form-label">Enter EmployeeID :</label>
+                    <input class="form-control form-control-sm" id="empId" name="eId" 
+                     type="text" placeholder="Enter EmployeeID">
+                    <div id="empIdValidation" class="text-danger font-weight-bold"></div>
+                </div>
+                <div class="col-md-6 col-sm-12 form-group">
+                    <label for="name">Enter Employee name :</label>
+                    <input class="form-control form-control-sm" name="eName" type="text"
+                        placeholder="Enter Employee name">
+                    <div id="empNameValidation" class="text-danger font-weight-bold"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 form-group">
+                    <label for="name">Enter age :</label>
+                    <input class="form-control form-control-sm" name="eAge" type="text" 
+                    placeholder="Enter Age">
+                    <div id="empAgeValidation" class="text-danger font-weight-bold"></div>
+                </div>
+                <div class="col-md-6 col-sm-12 form-group mt-4">
+                    <div class="row">
+                        <label class="col-3" for="name">Select Gender :</label>
+                        <div class="form-check col-2">
+                            <label class="form-check-label">
+                                <input class="form-check-input" name="eGender" type="radio" value="Male">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check col-2">
+                            <label class="form-check-label">
+                                <input class="form-check-input" name="eGender" type="radio" value="Female">
+                                Female
+                            </label>
+                        </div>
+                    </div>
+                    <div id="empGenderValidation" class="text-danger font-weight-bold"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 form-group">
+                    <label for="name">Enter designation :</label>
+                    <input class="form-control form-control-sm" name="eDesignation" type="text"
+                        placeholder="Enter Designation">
+                    <div id="empDesignationValidation" class="text-danger font-weight-bold"></div>
+                </div>
+                <div class="col-md-6 col-sm-12 form-group">
+                    <label for="name">Enter salary :</label>
+                    <input class="form-control form-control-sm" name="eSalary" type="text" placeholder="Enter Salary">
+                    <div id="empSalaryValidation" class="text-danger font-weight-bold"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 form-group">
+                    <label for="location">Enter location :</label>
+                    <select class="form-control" name="eLocation" id="location">
+                        <option>Select Location</option>
+                        <option>Modasa</option>
+                        <option>Mumbai</option>
+                        <option>Pune</option>
+                        <option>Gandhinagar</option>
+                    </select>
+                    <div id="empLocationValidation" class="text-danger font-weight-bold"></div>
+                </div>
+                <div class="col-md-6 col-sm-12 form-group">
+                    <label for="name">Enter Email ID :</label>
+                    <input class="form-control form-control-sm" name="eEmailId" type="text"
+                        placeholder="Enter Email ID">
+                    <div id="empEmailIdValidation" class="text-danger font-weight-bold"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 form-group">
+                    <label for="name">Enter Date of Joining :</label>
+                    <input class="form-control form-control-sm" name="eDateJoin" type="date"
+                        placeholder="Enter Date of Joining in formate MM-DD-YYYY">
+                    <div id="empDOJValidation" class="text-danger font-weight-bold"></div>
+                    </div>
+                <div class="col-md-6 col-sm-12 form-group">
+                    <label for="name">Enter contact number :</label>
+                    <input class="form-control form-control-sm" name="eContactNumber" type="text"
+                        placeholder="Enter contact number">
+                    <div id="empContactNumValidation" class="text-danger font-weight-bold"></div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-success mb-3" onclick="formValidate(document.form1.eId.value,
+                                                                       document.form1.eName.value,
+                                                                       document.form1.eAge.value,
+                                                                       document.form1.eGender.value,
+                                                                       document.form1.eDesignation.value,
+                                                                       document.form1.eSalary.value,
+                                                                       document.form1.eLocation.value,
+                                                                       document.form1.eEmailId.value,
+                                                                       document.form1.eDateJoin.value,
+                                                                       document.form1.eContactNumber.value)"
+                    type="button">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="./AssignmentDay3.js"></script>
+</body>
+
+</html>

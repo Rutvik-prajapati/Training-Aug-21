@@ -1,0 +1,32 @@
+<!-- Use Window.location object to navigate on another page -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Practice 7</title>
+</head>
+
+<body onload="navigatefn()">
+    <div class="container">
+        <p id="demo">hello</p>
+    </div>
+    <script>
+        function navigatefn(){
+            var navi = confirm("you want to navigate another page?");
+            if(navi == true)
+                window.location.assign("https://www.w3schools.com")
+        }
+        
+    </script>
+</body>
+
+</html>
