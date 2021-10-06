@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Practice 4</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="mt-5">
+            <button class="btn btn-success mt-3" onclick="getCurrentDate()" type="button">GetCurrentDate</button>
+            <div class="form-group">
+                <label for="name" class="pt-3" id="currentDate"></label>
+            </div>
+        </form>
+    </div>
+    <script>
+        function getCurrentDate() {
+            today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1; //As January is 0.
+            var yyyy = today.getFullYear();
+
+            if (dd < 10) dd = '0' + dd;
+            if (mm < 10) mm = '0' + mm;
+            var date = mm + "-" + dd + "-" + yyyy;
+            document.getElementById("currentDate").innerHTML = "Current Date is : "+date;
+        }
+    </script>
+</body>
+
+</html>

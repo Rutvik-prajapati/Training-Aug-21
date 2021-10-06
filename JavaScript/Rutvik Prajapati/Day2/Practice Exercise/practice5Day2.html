@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Practice 5</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="mt-5">
+            <div class="form-group">
+                <label for="name">Please enter text :</label>
+                <input class="form-control form-control-sm" type="text" id="strText" placeholder="Enter Text">
+            </div>
+            <div class="form-group">
+                <label for="name" class="pt-3" id="arrValue"></label>
+            </div>
+            <button class="btn btn-success mt-3" onclick="convertStrToArray(strText.value)"
+                type="button">ConvertSrtToArray</button>
+            <button class="btn btn-success mt-3" onclick="pushfn()"
+                type="button">Push</button>
+            <button class="btn btn-success mt-3" onclick="popfn()"
+                type="button">Pop</button>
+            <button class="btn btn-success mt-3" onclick="shiftfn()"
+                type="button">Shift</button>
+            <button class="btn btn-success mt-3" onclick="deletefn()"
+                type="button">Delete</button>
+        </form>
+    </div>
+    <script>
+        var arr;
+        function convertStrToArray(text) {
+            if (text.length === 0) {
+                alert("text value is null or empty");
+            }
+            else {
+                arr = text.trim().split(" ");
+                document.getElementById("arrValue").innerHTML="Array : ["+arr+"]";
+            }
+        }
+        function pushfn()
+        {
+            var str = prompt("Enter string :");
+            arr.push(str);
+            document.getElementById("arrValue").innerHTML="Array : ["+arr+"]";
+        }
+        function popfn()
+        {
+            arr.pop();
+            document.getElementById("arrValue").innerHTML="Array : ["+arr+"]";
+        }
+        function shiftfn()
+        {
+            arr.shift();
+            document.getElementById("arrValue").innerHTML="Array : ["+arr+"]";
+        }
+        function deletefn()
+        {
+            var num = parseInt(prompt("Enter array index number which you want to delete :"));
+            delete arr[num];
+            document.getElementById("arrValue").innerHTML="Array : ["+arr+"]";
+        }
+        
+    </script>
+</body>
+
+</html>
