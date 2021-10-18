@@ -1,0 +1,46 @@
+<!-- Using Function Constructor, find the area of rectangle -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
+        integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"
+        crossorigin="anonymous"></script>
+    <title>practice 2</title>
+</head>
+
+<body>
+    <div class="container form-group">
+        <label class="form-label" for="">Enter rectangle length value:</label>
+        <input class="form-control" type="number" name="length" id="length" placeholder="Enter Length">
+        <label class="form-label" for="">Enter rectangle width value:</label>
+        <input class="form-control" type="number" name="width" id="width" placeholder="Enter Width">
+        <button class="btn btn-success" type="button" onclick="generateArea()">GetAreaValue</button>
+    </div>
+
+    <div class="text-center" id="result"></div>
+</body>
+<script>
+    function generateArea() {
+        var length = document.getElementById("length").value;
+        var width = document.getElementById("width").value;
+        var ractArea = new Function("l", "b", "return l*b");
+        var x = ractArea(length, width);
+
+        document.getElementById("result").innerHTML = "Rectangle Area : " + x;
+    }
+</script>
+
+</html>

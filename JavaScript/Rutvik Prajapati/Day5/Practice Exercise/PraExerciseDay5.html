@@ -1,0 +1,85 @@
+<!-- What to Learn
+
+Functions
+Function Expression
+Function Constructor
+Self-Invoking constructor
+Function Call
+Function Apply
+Function Hoising
+Global variable & Local Variable
+Function closure -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        // Functions
+            function add(a,b)
+            {
+                return a+b;
+            }
+            var result = add(10,12);
+            console.log("add : "+result);
+
+        // Function Expression  also called as anonymous function(without name)..
+            var x = function(a,b) {
+                return a*b;
+            }
+            var y = x(4,5);
+            console.log("mul : "+y)
+
+        // Function Constructor
+            var multiply = new Function("a","b","return a*b");
+            var x = multiply(4,7);
+            console.log("FunConstructor : "+x);
+
+        // Self-Invoking constructor
+            (function(){
+                console.log("Hello this is self-invoking function..");
+            })();
+         
+        //Arrow Function
+            var d = (x,y) => x*y;
+            var f = d(2,4);
+            console.log("multiply : "+f);
+
+        //Function call
+         var person = {
+             firstName : "Rutvik",
+             lastName : "Prajapati",
+             fullname : function() {
+                 return this.firstName + " "+this.lastName;
+             }
+         }
+         var fullname = person.fullname();
+         console.log("fullname : "+fullname);
+
+        // Function Hoising
+            var z = addition(5); //call function before define
+            console.log(z);
+
+            function addition(a){  //define a function
+                return a+a;
+            }
+
+        
+        // Function closure
+            var add = (function(){
+                var counter = 0;
+                return function(){counter+=1; return counter;}
+            })()
+            add();
+            add();
+            add();
+           
+    </script>
+</html>

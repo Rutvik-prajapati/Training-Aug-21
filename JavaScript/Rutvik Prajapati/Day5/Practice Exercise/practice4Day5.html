@@ -1,0 +1,33 @@
+<!-- Using Function call create employee object with field Name, Address and 
+    Designation and pass it to function. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice 4</title>
+</head>
+
+<body>
+    <button onclick="getEmpDetails()">Get Employee Detail</button>
+    <div id="details"></div>
+</body>
+<script>
+    //Function call
+    function getEmpDetails() {
+        var Employee = {
+            fieldName: "Software Developer",
+            address: "123,vidhyakunj society,modasa",
+            designation: "Software Engineer",
+            empDetails: function () {
+                return this.fieldName + " " + this.address + " " + this.designation;
+            }
+        }
+        var getEmpDetails = Employee.empDetails();
+        document.getElementById("details").innerHTML = getEmpDetails;
+    }
+</script>
+
+</html>
