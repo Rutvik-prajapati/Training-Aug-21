@@ -1,0 +1,29 @@
+<!-- Define a function called callback which receives an argument and prints the square of that number. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice 1</title>
+</head>
+<body>
+    <h1 id="demo" ></h1>
+    <h2 id="square"></h2>
+</body>
+    <script>
+        function fnSquare(a,callback){
+           
+            callback(a);
+        }
+        function square(num)
+        {
+            var result = num*num;
+            document.getElementById("square").innerHTML = result 
+        }
+        var b = parseInt(prompt("Enter number"));
+        document.getElementById("demo").innerHTML = "The number "+b+" square is : " 
+        fnSquare(b,square);
+    </script>
+</html>
