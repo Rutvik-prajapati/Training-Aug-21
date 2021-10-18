@@ -1,0 +1,80 @@
+<!-- – Put a droplist with 5 country name from list object using jquery
+
+                  (Eg. India, United Kingdom..). Default value should “Please select”.
+
+                – Bellow droplist all country name which are in the dropdown that should display with Label :
+
+                  “Your Selected Country : “.
+
+                – By default all country name should display.
+
+                – Only that country name should appear which are you select from dropdown.
+
+                  All other label should be disappear.
+
+                – When i select ‘Please select’, all countries name should get displayed. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
+        integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"
+        crossorigin="anonymous"></script>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+    <title>Assignment</title>
+</head>
+<body>
+    <div class="container border mt-2">
+        <div class="form-check">
+            <label class="form-check-label">Please select your Country :</label>
+        </div>
+        <div class="form-group">
+            <label for="gender">Country</label>
+            <select class="form-control" id="country">
+                <option>Please select</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-check-label" id="selectedCountry"></label>
+        </div>
+    </div>
+
+<script>
+    $(document).ready(function(){
+    var listObj = [{"country":"India"},
+                   {"country":"United Kingdom"},
+                   {"country":"US"},
+                   {"country":"Afghanistan"},
+                   {"country":"Albania"}];
+    var textVal = '' ;
+        $.each(listObj, function( key, item ) {
+            $("#country").append($('<option>',{
+                text: item.country
+            }));
+            textVal = textVal + item.country+ "  "
+        });
+    $("#selectedCountry").text(textVal);
+
+    $("#country").change(function(){
+        var selectedItem = $(this).val();
+        if(selectedItem == 'Please select')
+            $("#selectedCountry").text(textVal);
+        else
+            $("#selectedCountry").text("Your Selected Country : "+selectedItem);
+    })
+    });
+    
+</script>
+</body>
+</html>

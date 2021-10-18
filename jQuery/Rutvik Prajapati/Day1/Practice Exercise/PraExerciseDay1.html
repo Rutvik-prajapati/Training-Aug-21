@@ -1,0 +1,239 @@
+<!-- What to Learn
+
+What is jQuery
+Selectors
+    id selector
+    class selector
+Events
+Hide, show, Toggle, fadeIn, fadeout
+jQuery DOM Manipulation
+    text()
+    html()
+    val()
+    attr()
+jQuery Add Elements
+    append()
+    prepend()
+    after()
+    before()
+    remove()
+    empty()
+setting CSS
+    css()
+iterate
+    $.each() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
+        integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"
+        crossorigin="anonymous"></script>
+    <title>Practice</title>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Practice jQuery</h1>
+    <h2>Selectors</h2>
+    <h3 id="test">Some Text</h3>
+    <p class="c1">This is class selector</p>
+    
+    <br><br>
+
+    <h2>Events</h2>
+    <div id="box" class="container border border-danger ">
+        <h1>Text 1</h1>
+        <p>This is paragraph.</p>
+    </div>
+    <br><br>
+    <div id="sform">
+        <form action="">
+            <label for="">Name</label>
+            <input type="text" >
+            <label for="">class</label>
+            <input type="text" >
+            <label for="">Coutry</label>
+            <select name="" id="selectform">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <br>
+            <span id="selectedVal"></span>
+        </form>
+    </div>
+
+    <br><br>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button>Toggle</button>
+
+    <p>This is a paragraph with little content.</p>
+    <p>This is another small paragraph.</p>
+
+    <br>
+
+    <button id="fadein">fade in</button>
+    <button id="fadeout">fade out</button>
+    <button id="fade">Click to fade in boxes</button><br><br>
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+    
+    <br><br>
+    <button id="btn1">Append</button>
+    <button id="btn2">prepend</button>
+    <button id="btn3">after()</button>
+    <p id="after">this is first paragraph</p>
+    <button id="btn4">before()</button>
+    <p id="before">this is second paragraph</p>
+
+    <button id="btn5">remove()</button>
+    <button id="btn6">empty()</button>
+    <br><br>
+    <h2>Setting css</h2>
+    <ul class="temp">
+        <li id = "car">car</li>
+        <li class="temp">pen</li>
+        <li class="temp">cat</li>
+        <li id="got">got</li>
+    </ul>
+
+    <br><br>
+    <script>
+        $(document).ready(function(){
+        // Selectors
+        // id selector
+            var a = $("#test").html();
+            console.log(a);
+        
+        // class selector
+            var b = $(".c2").html();
+            console.log(b);
+
+        //Events
+            //click
+            $('#box').click(function(){
+                $('#box').css("background-color","red");
+            })
+
+            //dblclick
+            $('#box').dblclick(function(){
+                $('#box').css("background-color","orange");
+            })
+
+            //contextmenu
+            $('#box').contextmenu(function(){
+                $('#box').css("background-color","yellow");
+            })
+
+            //mouseenter
+            $('#box').mouseenter(function(){
+                $('#box').css("background-color","tan");
+            })
+
+            //mouseleave
+             $('#box').mouseleave(function(){
+                $('#box').css("background-color","purple");
+            })
+
+            //keyboard events
+            //keypress
+            $('body').keypress(function(){
+                $('body').css("background-color","purple");
+            })
+
+            //keyup
+            $('body').keyup(function(){
+                $(this).css("background-color","tan");
+            })
+
+            //keydown
+             $('body').keydown(function(){
+                $(this).css("background-color","orange");
+            })
+
+            //form events
+            $('input').focus(function(){
+                $('input').css("background-color","lime");
+            })
+
+            $('input').blur(function(){
+                $('input').css("background-color","");
+            })
+
+            $('#selectform').change(function(){
+                var selectvalue = $("#selectform").val();
+                $('#selectedVal').html(selectvalue);
+            })
+
+            //Hide, show, Toggle, fadeIn, fadeout
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+                $("p").show();
+            });
+
+            $("button").click(function(){
+                $("p").toggle();
+            })
+
+            $("#fadein").click(function(){
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+            });fadeout
+
+            $("#fadeout").click(function(){
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(3000);
+            });
+
+        // jQuery Add Elements
+            // append()
+            $("#btn1").click(function(){
+                $("ul").append(" <li>Appended text</li>");
+            });
+            // prepend()
+            $("#btn2").click(function(){
+                $("ul").prepend("<li>Appended text</li>");
+            });
+
+            // after()
+            $("#btn3").click(function(){
+                $("#after").after("this is after function");
+            });
+
+            // before()
+            $("#btn4").click(function(){
+                $("#before").before("this is before function");
+            });
+            // remove()
+            $("#btn5").click(function(){
+                $("#after").remove();
+            });
+            // empty()
+            $("#btn6").click(function(){
+                $("#after").empty();
+            });
+        // setting CSS
+        // css()
+            var temp = $(".temp").css("border","1px solid red");
+            var tempId = $("#car,#got").css("background-color","blue");
+        })
+    </script>
+</body>
+</html>
