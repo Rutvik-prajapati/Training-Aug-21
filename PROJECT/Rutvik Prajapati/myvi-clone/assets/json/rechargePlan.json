@@ -1,0 +1,85 @@
+{
+    "plan": [
+        {
+            "id": 1,
+            "price":"501",
+            "call": "Truly Unlimited",
+            "data": "3GB/Day",
+            "totalData":"84gb",
+            "validity": "28 Days",
+            "status": "active",
+            "serviceValidity":"no service validity"
+        },
+        {
+            "id": 2,
+            "price":"399",
+            "call": "Truly Unlimited",
+            "data": "1.5GB/Day",
+            "totalData":"84gb",
+            "validity": "56 Days",
+            "status": "active",
+            "serviceValidity":"no service validity"
+        },
+        {
+            "id": 3,
+            "price":"249",
+            "call": "Truly Unlimited",
+            "data": "1.5GB/Day",
+            "totalData":"42gb",
+            "validity": "28 Days",
+            "status": "active",
+            "serviceValidity":"no service validity"
+        },
+        {
+            "id": 4,
+            "price":"601",
+            "call": "Truly Unlimited",
+            "data": "2GB/Day",
+            "totalData":"1.3gb",
+            "validity": "56 Days",
+            "status": "active",
+            "serviceValidity":"no service validity"
+        },
+        {
+            "id": 4,
+            "price":"98",
+            "call": "Truly Unlimited",
+            "data": "0.42GB/Day",
+            "totalData":"12gb",
+            "validity": "28 Days",
+            "status": "active",
+            "serviceValidity":"no service validity"
+        },
+        {
+            "id": 6,
+            "price":"48",
+            "call": "Truly Unlimited",
+            "data": "0.10GB/Day",
+            "totalData":"3gb",
+            "validity": "28 Days",
+            "status": "active",
+            "serviceValidity":"no service validity"
+        },
+        {
+            "id": 7,
+            "price":"351",
+            "call": "Truly Unlimited",
+            "data": "2GB/Day",
+            "totalData":"100gb",
+            "validity": "56 Days",
+            "status": "active",
+            "serviceValidity":"no service validity"
+        },
+        {
+            "id": 8,
+            "price":"251",
+            "call": "Truly Unlimited",
+            "data": "1.78GB/Day",
+            "totalData":"50gb",
+            "validity": "28 Days",
+            "status": "active",
+            "serviceValidity":"no service validity"
+        }
+        
+    ]
+}
