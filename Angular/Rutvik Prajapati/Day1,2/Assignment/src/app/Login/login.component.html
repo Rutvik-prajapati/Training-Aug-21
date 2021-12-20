@@ -1,0 +1,14 @@
+<div class="container border p-3 mt-5">
+    <h3>This is Login Component</h3>
+    
+    <div class="form-group">
+      <label>Enter Username :</label>
+      <input type="text" class="form-control" placeholder="Enter username" [(ngModel)]="username">
+    </div>
+    <div class="form-group">
+        <label>Enter Password :</label>
+        <input type="password" class="form-control" placeholder="Enter password" [(ngModel)]="password">
+    </div>
+    <h5>{{validateUser()}}</h5>
+      
+</div>
