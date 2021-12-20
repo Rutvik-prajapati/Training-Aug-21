@@ -1,0 +1,14 @@
+<div class="container">
+  <label for="">Username</label>
+  <input type="text" class="form-control" [(ngModel)]="username">
+  <button type="button" class="btn btn-primary" (click) = "username = ''" [disabled]="username === ''" >Reset</button>
+  <p *ngIf="username != ''">My name is {{username}}</p>
+
+  <br><br>
+  <h5>ngStyle</h5>
+  <p [ngStyle]="{backgroundColor:GetColor()}">This is ngStyle practice</p>
+
+  <br><br>
+  <h5>ngClass</h5>
+  <p [ngClass]="{online:username == ''}">This is ngClass practice</p>
+</div>

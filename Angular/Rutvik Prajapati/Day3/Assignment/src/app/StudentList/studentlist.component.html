@@ -1,0 +1,27 @@
+
+
+<div class="container">
+    <h3>This is student list component</h3>
+    <table class="table table-bordered ">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">AGE</th>
+            <th scope="col">AVERAGE</th>
+            <th scope="col">GRADE</th>
+            <th scope="col">ACTIVE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr [ngStyle]="{'background-color':getGradeColor(Model.Grade)}" [ngSwitch]="Model.Grade" *ngFor="let Model of StudentModel">
+            <td *ngIf = "Model.Active == true">{{Model.Id}}</td>
+            <td *ngIf = "Model.Active == true">{{Model.Name}}</td>
+            <td *ngIf = "Model.Active == true">{{Model.Age}}</td>
+            <td *ngIf = "Model.Active == true">{{Model.Average}}</td>
+            <td *ngIf = "Model.Active == true">{{Model.Grade}}</td>
+            <td *ngIf = "Model.Active == true">{{Model.Active}}</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
