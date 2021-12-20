@@ -1,0 +1,13 @@
+<div class="container">
+    <p>name-editor works!</p>
+
+<label for="name">Name: </label>
+<input id="name" type="text" [formControl]="name">
+
+<p>Value:{{name.value}}</p> 
+
+<button class="btn btn-primary" (click)="updateName()">Update Name</button>
+
+
+
+</div>

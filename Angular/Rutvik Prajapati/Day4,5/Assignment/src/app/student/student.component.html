@@ -1,0 +1,295 @@
+<div class="container border p-4 bg-light">
+    <h3 class="text-center">Student Admission Form</h3>
+    <form [formGroup]="studentAdmissionForm" (ngSubmit)="OnSubmit()">
+        <div class="row" id="student-data" formGroupName="studentData" >
+            <h4>Student Info</h4>
+            <div class="form-group col-4">
+                <label for="firstname">Firstname</label>
+                <input formControlName="firstName" type="text" class="form-control" id="firstname">
+                
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentData.firstName').valid && studentAdmissionForm.get('studentData.firstName').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.firstName').errors['minlength']">Please enter minimum 3 character</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.firstName').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.firstName').errors['pattern']">Firstname is not valid</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="middlename">Middlename</label>
+                <input formControlName="middleName" type="text" class="form-control" id="middlename">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentData.middleName').valid && studentAdmissionForm.get('studentData.middleName').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.middleName').errors['minlength']">Please enter minimum 3 character</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.middleName').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.middleName').errors['pattern']">Middlename is not valid</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="lastname">Lastname</label>
+                <input formControlName="lastName" type="text" class="form-control" id="lastname">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentData.lastName').valid && studentAdmissionForm.get('studentData.lastName').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.lastName').errors['minlength']">Please enter minimum 3 character</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.lastName').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.lastName').errors['pattern']">Lastname is not valid</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="birthdate">Birthdate</label>
+                <input formControlName="dateOfBirth" type="date" class="form-control" id="birthdate">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentData.dateOfBirth').valid && studentAdmissionForm.get('studentData.dateOfBirth').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.dateOfBirth').errors['required']">This field is required</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="placeofbirth">Place of birth</label>
+                <input formControlName="placeOfBirth" type="text" class="form-control" id="placeofbirth">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentData.placeOfBirth').valid && studentAdmissionForm.get('studentData.placeOfBirth').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.placeOfBirth').errors['minlength']">Please enter minimum 3 character</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.placeOfBirth').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.placeOfBirth').errors['pattern']">Place of birth is not valid</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="firstlanguage">First Language</label>
+                <input formControlName="firstLanguage" type="text" class="form-control" id="firstlanguage">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentData.firstLanguage').valid && studentAdmissionForm.get('studentData.firstLanguage').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.firstLanguage').errors['minlength']">Please enter minimum 3 character</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.firstLanguage').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentData.firstLanguage').errors['pattern']">First Language is not valid</div>
+                </span>
+            </div>
+
+            <h5>Address</h5>
+            <div class="row" id="student-address" formGroupName="address">
+                <div class="form-group col-3">
+                    <label for="city">City</label>
+                    <input formControlName="city" type="text" class="form-control" id="city">
+                    <span class="help-block" *ngIf="!studentAdmissionForm.get('studentData.address.city').valid && studentAdmissionForm.get('studentData.address.city').touched">
+                        <div class="vError" *ngIf="studentAdmissionForm.get('studentData.address.city').errors['minlength']">Please enter minimum 3 character</div>
+                        <div class="vError" *ngIf="studentAdmissionForm.get('studentData.address.city').errors['required']">This field is required</div>
+                        <div class="vError" *ngIf="studentAdmissionForm.get('studentData.address.city').errors['pattern']">City is not valid</div>
+                    </span>
+                </div>
+                <div class="form-group col-3">
+                    <label for="state">State</label>
+                    <input formControlName="state" type="text" class="form-control" id="state">
+                    <span class="help-block" *ngIf="!studentAdmissionForm.get('studentData.address.state').valid && studentAdmissionForm.get('studentData.address.state').touched">
+                        <div class="vError" *ngIf="studentAdmissionForm.get('studentData.address.state').errors['minlength']">Please enter minimum 3 character</div>
+                        <div class="vError" *ngIf="studentAdmissionForm.get('studentData.address.state').errors['required']">This field is required</div>
+                        <div class="vError" *ngIf="studentAdmissionForm.get('studentData.address.state').errors['pattern']">State is not valid</div>
+                    </span>
+                </div>
+                <div class="form-group col-3">
+                    <label for="country">Country</label>
+                    <input formControlName="country" type="text" class="form-control" id="country">
+                    <span class="help-block" *ngIf="!studentAdmissionForm.get('studentData.address.country').valid && studentAdmissionForm.get('studentData.address.country').touched">
+                        <div class="vError" *ngIf="studentAdmissionForm.get('studentData.address.country').errors['minlength']">Please enter minimum 3 character</div>
+                        <div class="vError" *ngIf="studentAdmissionForm.get('studentData.address.country').errors['required']">This field is required</div>
+                        <div class="vError" *ngIf="studentAdmissionForm.get('studentData.address.country').errors['pattern']">Country is not valid</div>
+                    </span>
+                </div>
+                <div class="form-group col-3">
+                    <label for="pin">Pincode No.</label>
+                    <input formControlName="pin" type="text" class="form-control" id="pin">
+                    <span class="help-block" *ngIf="!studentAdmissionForm.get('studentData.address.pin').valid && studentAdmissionForm.get('studentData.address.pin').touched">
+                        <div class="vError" *ngIf="studentAdmissionForm.get('studentData.address.pin').errors['minlength']">Please enter minimum 3 character</div>
+                        <div class="vError" *ngIf="studentAdmissionForm.get('studentData.address.pin').errors['required']">This field is required</div>
+                        <div class="vError" *ngIf="studentAdmissionForm.get('studentData.address.pin').errors['pattern']">Pin is not valid</div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="studentFather-data" formGroupName="studentFatherData" >
+            <h4>Student Father Info</h4>
+            <div class="form-group col-4">
+                <label for="firstname">Firstname</label>
+                <input formControlName="firstName" type="text" class="form-control" id="firstname">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentFatherData.firstName').valid && studentAdmissionForm.get('studentFatherData.firstName').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.firstName').errors['minlength']">Please enter minimum 3 character</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.firstName').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.firstName').errors['pattern']">Firstname is not valid</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="middlename">Middlename</label>
+                <input formControlName="middleName" type="text" class="form-control" id="middlename">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentFatherData.middleName').valid && studentAdmissionForm.get('studentFatherData.middleName').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.middleName').errors['minlength']">Please enter minimum 3 character</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.middleName').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.middleName').errors['pattern']">Middlename is not valid</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="lastname">Lastname</label>
+                <input formControlName="lastName" type="text" class="form-control" id="lastname">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentFatherData.lastName').valid && studentAdmissionForm.get('studentFatherData.lastName').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.lastName').errors['minlength']">Please enter minimum 3 character</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.lastName').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.lastName').errors['pattern']">Lastname is not valid</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="email">Email</label>
+                <input formControlName="email" type="email" class="form-control" id="email">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentFatherData.email').valid && studentAdmissionForm.get('studentFatherData.email').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.email').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.email').errors['email']">Email is not valid</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="educationQualification">Education Qualification</label>
+                <input formControlName="educationQualification" type="text" class="form-control" id="educationQualification">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentFatherData.educationQualification').valid && studentAdmissionForm.get('studentFatherData.educationQualification').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.educationQualification').errors['required']">This field is required</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="profession">Profession</label>
+                <input formControlName="profession" type="text" class="form-control" id="profession">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentFatherData.profession').valid && studentAdmissionForm.get('studentFatherData.profession').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.profession').errors['required']">This field is required</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="designation">Designation</label>
+                <input formControlName="designation" type="text" class="form-control" id="designation">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentFatherData.designation').valid && studentAdmissionForm.get('studentFatherData.designation').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.designation').errors['required']">This field is required</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="phone">Phone No.</label>
+                <input formControlName="phone" type="text" class="form-control" id="phone">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentFatherData.phone').valid && studentAdmissionForm.get('studentFatherData.phone').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentFatherData.phone').errors['required']">This field is required</div>
+                </span>
+            </div>
+        </div>
+        <div class="row" id="studentMother-data" formGroupName="studentMotherData" >
+            <h4>Student Mother Info</h4>
+            <div class="form-group col-4">
+                <label for="firstname">Firstname</label>
+                <input formControlName="firstName" type="text" class="form-control" id="firstname">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentMotherData.firstName').valid && studentAdmissionForm.get('studentMotherData.firstName').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.firstName').errors['minlength']">Please enter minimum 3 character</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.firstName').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.firstName').errors['pattern']">Firstname is not valid</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="middlename">Middlename</label>
+                <input formControlName="middleName" type="text" class="form-control" id="middlename">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentMotherData.middleName').valid && studentAdmissionForm.get('studentMotherData.middleName').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.middleName').errors['minlength']">Please enter minimum 3 character</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.middleName').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.middleName').errors['pattern']">Firstname is not valid</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="lastname">Lastname</label>
+                <input formControlName="lastName" type="text" class="form-control" id="lastname">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentMotherData.lastName').valid && studentAdmissionForm.get('studentMotherData.lastName').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.lastName').errors['minlength']">Please enter minimum 3 character</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.lastName').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.lastName').errors['pattern']">Firstname is not valid</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+              <label for="email">Email</label>
+              <input formControlName="email" type="email" class="form-control" id="email">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentMotherData.email').valid && studentAdmissionForm.get('studentMotherData.email').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.email').errors['required']">This field is required</div>
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.email').errors['email']">Email is not valid</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="educationQualification">Education Qualification</label>
+                <input formControlName="educationQualification" type="text" class="form-control" id="educationQualification">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentMotherData.educationQualification').valid && studentAdmissionForm.get('studentMotherData.educationQualification').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.educationQualification').errors['required']">This field is required</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+              <label for="profession">Profession</label>
+              <input formControlName="profession" type="text" class="form-control" id="profession">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentMotherData.profession').valid && studentAdmissionForm.get('studentMotherData.profession').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.profession').errors['required']">This field is required</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+                <label for="designation">Designation</label>
+                <input formControlName="designation" type="text" class="form-control" id="designation">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentMotherData.designation').valid && studentAdmissionForm.get('studentMotherData.designation').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.designation').errors['required']">This field is required</div>
+                </span>
+            </div>
+            <div class="form-group col-4">
+              <label for="phone">Phone No.</label>
+              <input formControlName="phone" type="text" class="form-control" id="phone">
+                <span class="help-block" *ngIf="!studentAdmissionForm.get('studentMotherData.phone').valid && studentAdmissionForm.get('studentMotherData.phone').touched">
+                    <div class="vError" *ngIf="studentAdmissionForm.get('studentMotherData.phone').errors['required']">This field is required</div>
+                </span>
+            </div>
+        </div>
+        <div class="text-center p-2">
+            <button type="submit" class="btn btn-primary" [disabled]="!studentAdmissionForm.valid">Submit</button>
+        </div>    
+    </form>
+    <br>
+    <div class="table-responsive">
+        <table class="table table-bordered" >
+            <thead>
+              <tr>
+                <th scope="col">Student Name</th>
+                <th scope="col">Date Of Birth</th>
+                <th scope="col">Place Of Birth</th>
+                <th scope="col">First Language</th>
+
+                <th scope="col">City</th>
+                <th scope="col">State</th>
+                <th scope="col">Country</th>
+                <th scope="col">Pincode</th>
+
+                <th scope="col">Father Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Education Qualification</th>
+                <th scope="col">Profession</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Mother Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Education Qualification</th>
+                <th scope="col">Profession</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Phone</th>
+              </tr>
+            </thead>
+            <tbody  *ngIf="studentList.length>0">
+              <tr *ngFor="let student of studentList">
+                  <td>{{student.studentAdmission.studentData.firstName}}</td>
+                  <td>{{student.studentAdmission.studentData.dateOfBirth}}</td>
+                  <td>{{student.studentAdmission.studentData.placeOfBirth}}</td>
+                  <td>{{student.studentAdmission.studentData.firstLanguage}}</td>
+
+                  <td>{{student.studentAdmission.studentData.address.city}}</td>
+                  <td>{{student.studentAdmission.studentData.address.state}}</td>
+                  <td>{{student.studentAdmission.studentData.address.country}}</td>
+                  <td>{{student.studentAdmission.studentData.address.pin}}</td>
+
+                  <td>{{student.studentAdmission.studentFatherData.firstName}}</td>
+                  <td>{{student.studentAdmission.studentFatherData.email}}</td>
+                  <td>{{student.studentAdmission.studentFatherData.educationQualification}}</td>
+                  <td>{{student.studentAdmission.studentFatherData.profession}}</td>
+                  <td>{{student.studentAdmission.studentFatherData.designation}}</td>
+                  <td>{{student.studentAdmission.studentFatherData.phone}}</td>
+                  <td>{{student.studentAdmission.studentMotherData.firstName}}</td>
+                  <td>{{student.studentAdmission.studentMotherData.email}}</td>
+                  <td>{{student.studentAdmission.studentMotherData.educationQualification}}</td>
+                  <td>{{student.studentAdmission.studentMotherData.profession}}</td>
+                  <td>{{student.studentAdmission.studentMotherData.designation}}</td>
+                  <td>{{student.studentAdmission.studentMotherData.phone}}</td>
+                  <!-- <td></td> -->
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    
+</div>

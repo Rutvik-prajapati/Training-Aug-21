@@ -1,0 +1,45 @@
+<div class="container border p-4">
+    <h3>This is Reactive Form component</h3>
+    <form [formGroup]="signupForm" (ngSubmit)="OnSubmit()">
+        <div id="user-data" formGroupName="userData" >
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input formControlName="username" type="text" class="form-control" id="username">
+            </div>
+            <span class="help-block" *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched">
+                <span *ngIf="signupForm.get('userData.username').errors['nameIsForbidden']">This name is invalid</span>
+                <span *ngIf="signupForm.get('userData.username').errors['required']">This field is required</span>
+            </span>
+           
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input formControlName="email" type="email" class="form-control" id="email">
+            </div>
+        </div>
+       
+        <div class="radio" *ngFor="let gender of genders">
+            <label>
+                <input 
+                formControlName="gender"
+                type="radio" 
+                name="gender"
+                ngModel
+                [value]="gender">
+                {{gender}}
+            </label>
+        </div>
+        <div formArrayName="hobbies">
+            <button 
+            class="btn btn-default" 
+            type="button"
+            (click)="AddHobby()">Add Hobbies</button>
+            <div 
+            class="form-group"
+            *ngFor ="let hobbyControl of getHobbies(); let i = index" 
+            >
+                <input type="text" class="form-control" [formControlName]="i">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
