@@ -1,0 +1,23 @@
+<div class="container border bg-light">
+    <h1>This is StudentList component</h1>
+    <h3>Student List</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered" >
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Standard</th>
+
+              </tr>
+            </thead>
+            <tbody  *ngIf="studentListData.length>0">
+              <tr *ngFor="let student of studentListData">
+                  <td>{{student.name}}</td>
+                  <td>{{student.age}}</td>
+                  <td>{{student.std}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

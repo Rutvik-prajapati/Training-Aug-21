@@ -1,0 +1,11 @@
+<div class="container border">
+  <h1>This is Parent Component</h1>
+  <app-student (parentFunction)="parentFunction($event)"></app-student>
+  <br>
+  <h3>Student Info</h3>
+  <h4>Name : {{stuInfo.name}}</h4>
+  <h4>Age : {{stuInfo.age}}</h4>
+  <h4>Std : {{stuInfo.std}}</h4>
+
+  <app-studentList [studentListData]="studentList"></app-studentList>
+</div>
